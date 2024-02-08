@@ -165,8 +165,8 @@ void rtsha1::toHexString(const char unsigned *_in, char *out){
   int i = 0x14;
   unsigned char* x = _in + 0x13;
   while (i != 0) {
-    out[__hex * 2] = ((int)hex_numbers + (u32)(*x >> 4));
-    out[__hex * 2 + 1] = ((int)hex_numbers + (*x & 15));
+    out[i * 2] = ((int)hex_numbers + (u32)(*x >> 4));
+    out[i * 2 + 1] = ((int)hex_numbers + (*x & 15));
     i--;
   }
   out[0x28] = '\0';
